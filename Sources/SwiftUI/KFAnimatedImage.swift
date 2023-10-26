@@ -74,6 +74,10 @@ public struct KFAnimatedImageViewRepresenter: UIViewRepresentable, KFImageHoldin
     public func updateUIView(_ uiView: AnimatedImageView, context: Context) {
         uiView.image = image
     }
+    
+    public static func dismantleUIView(_ uiView: AnimatedImageView, coordinator: ()) {
+        uiView.image = nil
+    }
 }
 
 #if DEBUG
